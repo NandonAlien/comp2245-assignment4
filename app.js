@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded',(event)=>{
     sub.onclick= function(){Act()}
     
     function Act(){
-        fetch('http://localhost/comp2245-assignment4/index.html')
+        fetch('http://localhost/comp2245-assignment4/superheroes.php')
             .then(response =>  response.text())
             .then(data =>{
                 alert(data)
