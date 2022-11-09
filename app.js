@@ -7,11 +7,11 @@ window.addEventListener('DOMContentLoaded',(event)=>{
         fetch('http://localhost/comp2245-assignment4/superheroes.php')
             .then(response =>  response.text())
             .then(data =>{
-                alert(data)
+                let set = document.querySelector("#display")
+                set.textContent= data
             })
 
         .catch(error =>alert(error))
-        console.log("check 1");
     };
 
 });
