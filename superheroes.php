@@ -115,7 +115,7 @@ function prints($superheroes){
 }
 
 
-$Assemble = $_GET["text"];
+$Assemble = $_POST["text"];
 checks($Assemble, $superheroes);
 
 ?>
