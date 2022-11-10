@@ -6,9 +6,12 @@
 header{
     background-color: #862323;
     color:whitesmoke;
+    padding: 10px;
 }
 header h1{font-size: 25px;}
-main{}
+main{
+    padding: 10px;
+}
 main h2{
     font-size: 20px;
 }
@@ -22,7 +25,9 @@ button{
     justify-content: center;
     
 }
-.display{}
+.display{
+    text-decoration: none;
+}
 footer{background-color: #862323;
     color:whitesmoke;
 font-size: 20px;}

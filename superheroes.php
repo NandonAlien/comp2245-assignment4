@@ -1,3 +1,5 @@
+
+
 <?php
 
 $superheroes = [
@@ -62,11 +64,58 @@ $superheroes = [
       "biography" => "Notably powerful, Wanda Maximoff has fought both against and with the Avengers, attempting to hone her abilities and do what she believes is right to help the world.",
   ], 
 ];
+       
+     function checks($input, $sup){
+        if($input == ""){
+        {prints($sup);}   
+            return;}
+        foreach($sup as $superhero):
+            
+             $l = find($input, $superhero);
+             if ($l ==true)
+                return;
+        endforeach;
+        ?>
+        <h3>
+        SUPERHERO NOT FOUND
+        </h3>
+        <?php
+     }
+        function find($input, $superhero){
 
+            if ($input == $superhero['name'])
+                       {SH($superhero);
+                        return true;}
+            if($input == $superhero['alias'])
+                       {    SH($superhero); 
+                                return true;}
+        };
+     ?>
+<?php 
+
+ function SH($arr){
 ?>
+   <h3> <?=$arr['name'];?></h3>
+    <h4><?=$arr['alias'];?></h4>
+    <p><?=$arr['biography']?></p>
+<?php
+ }
+?>      
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
+
+<?php 
+function prints($superheroes){ 
+?>
+  
+  <?php foreach ($superheroes as $superhero): ?>
   <li><?= $superhero['alias']; ?></li>
 <?php endforeach; ?>
-</ul>
+</ul> 
+<?php
+}
+
+
+$Assemble = $_GET["text"];
+checks($Assemble, $superheroes);
+
+?>

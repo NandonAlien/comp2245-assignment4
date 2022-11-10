@@ -8,10 +8,10 @@ window.addEventListener('DOMContentLoaded',(event)=>{
             .then(response =>  response.text())
             .then(data =>{
         let set = document.querySelector(".display")
-        set.textContent= data  
+        set.innerHTML= data  
             })
 
-        .catch(error =>alert(error))
+        .catch(error =>console(error))
         
     };
 
