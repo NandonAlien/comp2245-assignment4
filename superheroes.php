@@ -113,9 +113,14 @@ function prints($superheroes){
 </ul> 
 <?php
 }
+$Assemble;
+if (isset($_GET['set'])) {
+    $Assemble =$_GET['set'];
+} else {
+    // Fallback behaviour goes here
+}
 
 
-$Assemble = $_POST["text"];
 checks($Assemble, $superheroes);
 
 ?>
