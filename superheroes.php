@@ -117,7 +117,7 @@ $Assemble;
 if (isset($_GET['set'])) {
     $Assemble =$_GET['set'];
 } else {
-    // Fallback behaviour goes here
+   $Assemble="";
 }
 
 
